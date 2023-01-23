@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="/css/spectre.min.css">
+    <link rel="stylesheet" href="/css/spectre-exp.min.css">
+    <link rel="stylesheet" href="/css/spectre-icons.min.css">
+</head>
+
+<body>
+    <header class="navbar p-2">
+        <section class="navbar-section p-2">
+            <h3 class="tooltip tooltip-bottom" data-tooltip="©StudioEK">StatsEK</h4>
+        </section>
+        <section class="navbar-section p-2">
+            <a href="https://github.com/emrekayik/statsek-web" class="btn btn-link">GitHub</a>
+        </section>
+    </header>
+    <!--
+    <div class="hero hero-sm bg-gray">
+        <div class="hero-body">
+            <h1>StatsEK-WEB</h1>
+            <p>Girdiğiniz verinin istatistik hesaplarını yapın!</p>
+        </div>
+    </div>
+    -->
+    <div class="veri-seti">
+        <p>Veri seti</p>
+        <ul>
+        </ul>
+    </div>
+    <label for="veri">Veri giriniz</label>
+    <input type="number" name="veri" id="veri" onclick="this.select();" required autocomplete="off" />
+    <button onclick="veriAl()">Veri Al</button>
+
+    <script>
+        // veriyi al ve listeye ekle
+        var veri = document.getElementById("veri").value;
+        var veriSeti = document.querySelector(".veri-seti ul");
+        function veriAl() {
+            if (veri == "") {
+                alert("Veri giriniz!");
+            } else {
+                var li = document.createElement("li");
+                li.innerHTML = veri;
+                veriSeti.appendChild(li);
+            }
+        }
+    </script>
+</body>
+
+</html>
