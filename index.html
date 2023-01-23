@@ -7,14 +7,19 @@
     <title>StatsEK-WEB</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
-<link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
-<link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
 </head>
 
 <body>
     <header class="navbar p-2">
         <section class="navbar-section p-2">
-            <h3 class="tooltip tooltip-bottom" data-tooltip="©StudioEK">StatsEK <kbd class="label">Girdiğiniz verinin istatistik hesaplarını yapın!</kbd></h4>
+            <h3 class="tooltip tooltip-bottom" data-tooltip="©StudioEK">
+                StatsEK
+                <kbd class="label hide-sm">
+                    Girdiğiniz verinin istatistik hesaplarını yapın!
+                </kbd>
+                </h3>
         </section>
         <section class="navbar-section p-2">
             <a href="https://github.com/emrekayik/statsek-web" class="btn btn-link">GitHub</a>
@@ -37,11 +42,12 @@
     <input type="number" name="veri" id="veri" onclick="this.select();" required autocomplete="off" />
     <button onclick="veriAl()">Veri Al</button>
 
+    <script src="./js/main.js"></script>
     <script>
         // veriyi al ve listeye ekle
-        var veri = document.getElementById("veri").value;
-        var veriSeti = document.querySelector(".veri-seti ul");
         function veriAl() {
+            var veri = document.getElementById("veri").value;
+            var veriSeti = document.querySelector(".veri-seti ul");
             if (veri == "") {
                 alert("Veri giriniz!");
             } else {
